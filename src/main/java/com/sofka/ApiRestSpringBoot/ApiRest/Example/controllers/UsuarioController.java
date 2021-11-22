@@ -39,9 +39,11 @@ public class UsuarioController {
         boolean ok = this.usuarioService.eliminarUsuario(id);
         if (ok){
             return "Se eliminó el usuario con id "+ id;
-        }else{
-            return "No se pudo eliminar el usuario con id " + id;
         }
+        return "No se pudo eliminar el usuario con id " + id;
+/*
+        Se reemplaza el Else para evitar anidaciones e indentaciones en
+        el código como buena práctica
+*/
     }
-
 }
