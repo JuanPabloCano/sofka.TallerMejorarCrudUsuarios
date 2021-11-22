@@ -13,9 +13,9 @@ public class UsuarioService {
     @Autowired
     UsuarioRepository usuarioRepository;
 
-    public ArrayList<UsuarioModel> obtenerUsuarios(){
+    public List<UsuarioModel> obtenerUsuarios(){
 
-        return (ArrayList<UsuarioModel>) usuarioRepository.findAll();
+        return (List<UsuarioModel>) usuarioRepository.findAll();
     }
 
     public UsuarioModel guardarUsuario(UsuarioModel usuario){
@@ -26,7 +26,7 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
-    public ArrayList<UsuarioModel> findByPrioridad(Integer prioridad){
+    public List<UsuarioModel> findByPrioridad(Integer prioridad){
         return usuarioRepository.findByPrioridad(prioridad);
     }
 

@@ -15,7 +15,7 @@ public class UsuarioController {
     UsuarioService usuarioService;
 
     @GetMapping
-    public ArrayList<UsuarioModel> obtenerUsuarios(){
+    public List<UsuarioModel> obtenerUsuarios(){
         return usuarioService.obtenerUsuarios();
     }
 
@@ -30,7 +30,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/query")
-    public ArrayList<UsuarioModel> findByPrioridad(@RequestParam("prioridad") Integer prioridad){
+    public List<UsuarioModel> findByPrioridad(@RequestParam("prioridad") Integer prioridad){
         return this.usuarioService.findByPrioridad(prioridad);
     }
 
